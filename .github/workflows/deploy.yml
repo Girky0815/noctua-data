@@ -1,0 +1,55 @@
+name: JSON化デプロイ
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'prime_series.yaml'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v7
+
+      - name: Python のセットアップ
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+
+      - name: pyyaml のインストール
+        run: pip install pyyaml
+
+      - name: YAML を JSON に変換
+        run: |
+          mkdir public
+          python -c "
+          import yaml, json
+          with open('prime_series.yaml', 'r', encoding='utf-8') as f:
+              data = yaml.safe_load(f)
+          with open('public/prime_series.json', 'w', encoding='utf-8') as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+          "
+
+      - name: GitHub Pages の設定
+        uses: actions/configure-pages@v6
+
+      - name: GitHub Pages へアーティファクトをアップロード
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
+
+      - name: デプロイ実行
+        id: deployment
+        uses: actions/deploy-pages@v4
