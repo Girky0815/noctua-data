@@ -688,6 +688,17 @@ series:
         name: "Sarofang Prime"
         category: "MELEE"
 
+  - id: "styanax_prime_pack"
+    name: "Styanax Prime"
+    releaseDate: "2026-06-18"
+    items:
+      - uniqueName: "/Lotus/Powersuits/Hoplite/StyanaxPrime"
+        name: "Styanax Prime"
+        category: "WARFRAME"
+      - uniqueName: "/Lotus/Weapons/Tenno/LongGuns/PrimeAfentis/PrimeAfentisWeapon"
+        name: "Afentis Prime"
+        category: "PRIMARY"
+
   - id: "citrine_prime_pack"
     name: "Citrine Prime"
     releaseDate: "2026-09-23"
@@ -701,14 +712,3 @@ series:
       - uniqueName: "/Lotus/Weapons/Tenno/Archwing/Melee/PrimeCorufell/PrimeCorufellScytheWeapon"
         name: "Corufell Prime"
         category: "MELEE"
-
-  - id: "styanax_prime_pack"
-    name: "Styanax Prime"
-    releaseDate: "2026-12-16"
-    items:
-      - uniqueName: "/Lotus/Powersuits/Hoplite/StyanaxPrime"
-        name: "Styanax Prime"
-        category: "WARFRAME"
-      - uniqueName: "/Lotus/Weapons/Tenno/LongGuns/PrimeAfentis/PrimeAfentisWeapon"
-        name: "Afentis Prime"
-        category: "PRIMARY"
