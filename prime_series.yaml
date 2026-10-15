@@ -1,4 +1,4 @@
-updatedAt: "2026-10-15T00:00:00Z"
+updatedAt: "2026-10-16T00:00:00Z"
 series:
   # - id: "excalibur_prime_pack"
   #   name: "Excalibur Prime"
@@ -698,6 +698,9 @@ series:
       - uniqueName: "/Lotus/Weapons/Tenno/LongGuns/PrimeAfentis/PrimeAfentisWeapon"
         name: "Afentis Prime"
         category: "PRIMARY"
+      - uniqueName: "/Lotus/Weapons/Tenno/Pistols/PrimeAthodai/PrimeAthodaiPistolWeapon"
+        name: "Athodai Prime"
+        category: "SECONDARY"
 
   - id: "citrine_prime_pack"
     name: "Citrine Prime"
